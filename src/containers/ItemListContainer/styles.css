@@ -1,4 +1,4 @@
-.offers{
+/*.offers{
     font-size: 24px;
     font-weight: bolder;
     text-align: center;
@@ -10,4 +10,8 @@
 .img{
     height: 200 px;
     width: 150px;
+}*/
+.data{
+    display: inline;
+    text-align: center;
 }
