@@ -1,0 +1,12 @@
+[{"nombre":"Tester Pinza","precio":200,"marca":"ABB","cantidad":5,"id":1,"imagen":"./imagenes/tester.png","costo":"Precio: "},
+    {"nombre":"Breaker Trifasico","precio":130,"marca":"ABB","cantidad":5,"id":2,"imagen":"./imagenes/breaker403p.jpg","costo":"Precio: "},
+    {"nombre":"Reflector Led","precio":20,"marca":"PHILIPS","cantidad":5,"id":3,"imagen":"./imagenes/philips75w.jpg","costo":"Precio: "},
+    {"nombre":"Espiral Negro","precio":18,"marca":"GE","cantidad":50,"id":4,"imagen":"./imagenes/espiralnegro.jpg","costo":"Precio: "},
+    {"nombre":"Breaker 50 Amp.","precio":80,"marca":"ABB","cantidad":40,"id":5,"imagen":"./imagenes/breaker50a.jpg","costo":"Precio: "},
+    {"nombre":"Bombillo Led 12W","precio":15,"marca":"Whestinhouse","cantidad":120,"id":6,"imagen":"./imagenes/led12w.jpg","costo":"Precio: "},
+    {"nombre":"Transformador","precio":800,"marca":"CAIVET","cantidad":8,"id":7,"imagen":"./imagenes/TRANSFORMADOR-MONOFÁSICO1.jpg","costo":"Precio: "},
+    {"nombre":"Cable TW # 12","precio":20,"marca":"TESLA","cantidad":5,"id":8,"imagen":"./imagenes/cable12.jpg","costo":"Precio: "},
+    {"nombre":"Bombillo Led 9 W","precio":12,"marca":"Sun","cantidad":210,"id":9,"imagen":"./imagenes/led1.jpg","costo":"Precio: "},
+    {"nombre":"Transfor. S/E","precio":2000,"marca":"SIEMENS","cantidad":2,"id":10,"imagen":"./imagenes/Transformador SE.png","costo":"Precio: "},
+    {"nombre":"Tuberia PVC","precio":20,"marca":"Tubrica","cantidad":5,"id":11,"imagen":"./imagenes/varios.jpg","costo":"Precio: "},
+    {"nombre":"Tester ","precio":20,"marca":"ABB","cantidad":5,"id":12,"imagen":"./imagenes/tester2.jpg","costo":"Precio: "}]

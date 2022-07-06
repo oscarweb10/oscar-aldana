@@ -1,11 +1,135 @@
 
-import ItemCounter from '../../components/ItemCounter/ItemCounter'
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import ItemList from '../../components/ItemList';
+
+
+
+const ItemListContainer = ({ greeting }) => {
+
+  
+  const [productos, setProductos] = useState([])
+  const [productosFiltrados, setProductosFiltrados] = useState([])
+
+
+
+
+  const params = useParams()
+  console.log(params)
+
+  useEffect(() => {
+
+    const getProductos = async () => {
+      try {
+        const response = await fetch('https://fakestoreapi.com/products');
+        const data = await response.json();
+        setProductos(data);
+        setProductosFiltrados(data)
+      }catch (error){
+        console.log('Hubo u error')
+        console.log(error)
+      }
+    }
+    getProductos();
+  }, [])
+
+  useEffect(() => {
+    if(params?.categoryid){
+      const productosFiltrados = productos.filter(producto => producto.category === params.categoryid)
+    setProductosFiltrados(productosFiltrados)
+    } else {
+      setProductosFiltrados(productos)
+    }
+  }, [params, productos])
+
+  console.log(productos)
+  return (
+    <div>
+     
+     
+      {productos.length !== 0 ?
+        <ItemList products={productosFiltrados} />
+        :
+      
+        <p>Loading...</p>
+      }
+    </div>
+  )
+ 
+}
+    
+  
+
+export default ItemListContainer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*import ItemCounter from '../../components/ItemCounter/ItemCounter'
 import React, {useEffect, useState} from 'react'
 import ItemList from '../../components/ItemList'
 import './styles.css'
 
+
+
 const ItemListContainer = ({greeting}) => {
-  
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const [data, setData] = useState ([])
   const productos =[
@@ -47,6 +171,4 @@ const [data, setData] = useState ([])
         </div>
     </div>*/
   
-}
 
-export default ItemListContainer
