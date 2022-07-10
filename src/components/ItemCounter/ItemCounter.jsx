@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
 
-const ItemCounter = ({ initial, stock, onAdd }) => {
-
+const ItemCounter = ({ initial, stock}) => {
+   
     const [count, setCount] = useState(initial)
 
     const handleAdd = () => {
@@ -17,10 +17,33 @@ const ItemCounter = ({ initial, stock, onAdd }) => {
         if (count > initial) {
             setCount(count - 1)
         } else {
-            alert('Compra Minima: ' + initial)
+           alert('Compra Minima: ' + initial)
         }
 
     }
+
+    
+    const onAdd = (count)=>{
+        console.log( 'Agrego al Carrito: ' +count )
+      }
+    
+
+      const handleConfirm = () => {
+        if (count <= stock) {
+            initial(count)
+        }
+        else {
+            alert("Value > maxQuantity")
+        }
+    }
+
+
+
+
+
+
+
+
 
     const reset = () => {
         setCount(initial)
@@ -35,6 +58,7 @@ const ItemCounter = ({ initial, stock, onAdd }) => {
 
             <div>
             </div>
+            <button onClick={handleConfirm}>Confirm</button>
             <button onClick={reset}>Reset</button>
         </div>
     )

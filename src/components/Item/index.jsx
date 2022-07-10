@@ -1,5 +1,5 @@
 import React from 'react'
-import {Card, Button} from 'react-bootstrap'
+/*import {Card, Button} from 'react-bootstrap'*/
 import { useNavigate } from 'react-router-dom'
 import './Item1.css'
 
@@ -22,7 +22,7 @@ const handleDetail = ()=> {
       
 
       <p>{prod.title}</p>
-      <img src={prod.image} />
+      <img src={prod.image} alt='' />
       <p>Price:{' '+prod.price+'$'}</p>
      
       </div>
