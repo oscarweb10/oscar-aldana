@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import CartWidget from "../CartWidget";
 import './NavBar.css'
 import {Link} from 'react-router-dom';
+/*import {Shop} from "../../context/ShopContext";*/
 
 const NavBar = () => {
+
+ /* const value = useContext (Shop);
+
+  console.log(value) */ 
     return(
       <div>
       <h1>Eléctrico <span>EN LINEA</span></h1>
