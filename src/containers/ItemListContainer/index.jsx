@@ -3,15 +3,13 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemList from '../../components/ItemList';
 
-
-
 const ItemListContainer = ({ greeting }) => {
 
   
   const [productos, setProductos] = useState([])
   const [productosFiltrados, setProductosFiltrados] = useState([])
 
-
+  
 
 
   const params = useParams()

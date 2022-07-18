@@ -4,25 +4,31 @@ import './styles.css'
 
 
 const Cart = () => {
-  const { cart, cartLenght, removeItem, cleanCart } = useContext(Shop)
+  const { cart, cartLenght, removeItem, cleanCart, totalShopping } = useContext(Shop)
   return (
     <div>
+      <div className='resumen'>
+        {cartLenght() !== 0 && <p><button type="button" className="btn btn-danger" onClick={() => { cleanCart() }}>Vaciar Carrito</button></p>}
+        {cartLenght() !== 0 && <p><button type="button" className="btn btn-success">Comprar</button></p>}
+      </div>
       {cart.map(producto => {
         return <div className='cart' key={producto.id}>
           {/*<div className='titulo'><b>{producto.title} </b></div>*/}
-          <b>{producto.title} </b>
-          <img className='imagen' src={producto.image} style={{ width: 60 }} />
-          <b className='cant'>{producto.quantity}x</b>
-          <b className='title'>{producto.price}$</b>
-          <u className='cost'>    Total: {producto.quantity * producto.price}  $</u>
-          {cartLenght() !== 0 && <b><button onClick={() => { removeItem(producto) }}>X</button></b>}
-
+          <table class="table">
+            <tbody>
+              <tr>
+                <th scope="row"><img className='imagen' src={producto.image} style={{ width: 60 }} /></th>
+                <td>{producto.title}</td>
+                <td>Cant: {producto.quantity}</td>
+                <td> {producto.price} $</td>
+                <td>Total: {producto.quantity * producto.price} $</td>
+                <td>{cartLenght() !== 0 && <button type="button" className="btn btn-danger" onClick={() => { removeItem(producto) }}>X</button>}</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       })}
-
-      {cartLenght() !== 0 && <p><button onClick={() => { cleanCart() }}>Vaciar Carrito</button></p>}
-
-
+      {cartLenght() !== 0 && <h6 className='totalShopping' onClick={() => { totalShopping() }}>Total Compra: {totalShopping()} $</h6>}
     </div>
   )
 }

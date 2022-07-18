@@ -1,8 +1,14 @@
-.contenedorProducto{
+.row{
     text-align: center;
+align-items: center;
+width: 600px;
+height: 400px;
+margin-left: auto;
+margin-right: auto;
+/*border: solid; color: black;*/
+  
+    
+    
     }
-    .monitor{
-    width: 400px;
-    height: 300px;
-   
-    }
+.card{
+}

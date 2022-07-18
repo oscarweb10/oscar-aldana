@@ -37,14 +37,6 @@ const ItemCounter = ({ initial, stock}) => {
         }
     }
 
-
-
-
-
-
-
-
-
     const reset = () => {
         setCount(initial)
     }
@@ -55,9 +47,6 @@ const ItemCounter = ({ initial, stock}) => {
             <button onClick={handleAdd}>+</button>
             <button onClick={() => onAdd(count)}>Agregar al Carrito</button>
             <button onClick={handleDecrement}>-</button>
-
-            <div>
-            </div>
             <button onClick={handleConfirm}>Confirm</button>
             <button onClick={reset}>Reset</button>
         </div>

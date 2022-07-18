@@ -9,6 +9,7 @@ import NotFound from './components/NotFound';
 import ShopProvider from './context/ShopContext';
 import Cart from './containers/Cart';
 
+
 function App() {
   return (
     <ShopProvider>
