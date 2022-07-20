@@ -9,7 +9,7 @@ const ItemDetail = ({ product }) => {
   // Se aplica el hook Navigate, que permite hacer la navegacion entre ItemDeail y Cart
   const navigate = useNavigate();
 
-  product.stock = 8;
+ // product.stock = 8;
   product.initial = 1
 
   const [qtyAdded, setQtyAdded] = useState(0);
