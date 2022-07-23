@@ -1,18 +1,32 @@
+import { addDoc, collection } from 'firebase/firestore'
 import React, { useContext } from 'react'
 import { Shop } from '../../context/ShopContext'
+import { db } from '../../firebase/config'
+import ordenGenerada from '../Utilitario/generarOrden'
+/*import guardarOrden from '../Utilitario/guardarOrden'*/
 import './styles.css'
 
 
 const Cart = () => {
   const { cart, cartLenght, removeItem, cleanCart, totalShopping } = useContext(Shop)
+
+  const confirmarOrden = async () => {
+    const orden = ordenGenerada('Oscar', 'Calle 21', cart, 60)
+    /* guardarOrden(cart, orden)*/
+
+    const docRef = await addDoc(collection(db, 'orders'), orden);
+    console.log('Document written with ID: ', docRef.id);
+    alert(`'Document written with ID: ', ${docRef.id}`)
+  }
+
   return (
     <div>
       <div className='resumen'>
         {cartLenght() !== 0 && <p><button type="button" className="btn btn-danger" onClick={() => { cleanCart() }}>Vaciar Carrito</button></p>}
-        {cartLenght() !== 0 && <p><button type="button" className="btn btn-success">Comprar</button></p>}
+        {cartLenght() !== 0 && <p><button type="button" className="btn btn-success" onClick={() => { confirmarOrden() }}>Confirmar compra</button></p>}
       </div>
       {cart.map(producto => {
-        return <div className='cart' key={producto.id}>
+        return <div className='cart' key={producto.id}>c
           {/*<div className='titulo'><b>{producto.title} </b></div>*/}
           <table class="table">
             <tbody>
