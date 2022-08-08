@@ -1,12 +1,11 @@
-const ordenGenerada = (nombre, direccion, cart, total) => {
+const ordenGenerada = (nombre, direccion, cart, totalShopping) => {
     return {
         buyer: {
             nombre: nombre,
             direccion: direccion
         },
-        items: cart
-        ,
-        total: total,
+        items: cart,
+        totalShopping: totalShopping,
         createdAt: new Date().toLocaleString()
     }
 }

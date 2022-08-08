@@ -1,17 +1,20 @@
-.resumen{
+.resumen {
     display: flex;
     justify-content: space-around;
 
 }
 
-
-.totalShopping{
+.totalShopping {
     text-align: right;
     margin-right: 160px;
 }
 
+.carritoVacio {
+    text-align: center;
+}
 
+.botonesCarrito {
+    display: flex;
+    justify-content: space-around;
 
-
-
-
+}

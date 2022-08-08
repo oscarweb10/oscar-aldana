@@ -1,0 +1,28 @@
+.registro {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+}
+
+.ima {
+    padding-top: 20px;
+}
+
+.pfo {
+    font-size: 30px;
+}
+
+.dato {
+    text-align: center;
+}
+.totalArticulos{
+    font-size: 16px;
+    text-align: center;
+    padding-left: 20px;
+}
+.totalShopping{
+    font-size: 16px;
+    font-style: italic;
+    font-weight: bold;
+   
+}

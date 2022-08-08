@@ -1,14 +1,8 @@
-.row{
+.row {
     text-align: center;
-align-items: center;
-width: 600px;
-height: 400px;
-margin-left: auto;
-margin-right: auto;
-/*border: solid; color: black;*/
-  
-    
-    
-    }
-.card{
+    align-items: center;
+    width: 600px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }

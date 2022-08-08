@@ -21,3 +21,9 @@
    text-align: center;
    font-weight: bold;
  }
+ .nombre:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: all 0.75s;
+  transition: all 0.75s;
+}
