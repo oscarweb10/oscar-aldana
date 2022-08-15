@@ -16,5 +16,7 @@
 .botonesCarrito {
     display: flex;
     justify-content: space-around;
-
+}
+.imagen{
+    height: 60px;
 }

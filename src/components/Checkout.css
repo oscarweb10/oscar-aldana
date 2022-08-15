@@ -1,0 +1,243 @@
+
+
+*{
+   font-family: Arial, Helvetica, sans-serif;
+ }
+
+.App {
+  text-align: center;
+}
+
+.cardCarrito{
+  max-width: 800px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgb(71 71 71 / 30%) 0px 0px 40px 1px;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  padding-bottom: 15px;
+}
+
+.containerCheckOut{
+  border-radius: 10px;
+  box-shadow: rgb(71 71 71 / 30%) 0px 0px 40px 1px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-right: 5px;
+  margin-bottom: 20px;
+}
+
+.titleT{
+  text-align: center;
+}
+
+
+.imgProducto{
+  border-radius: 10px;
+}
+
+
+ .cartContainerCheck{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  grid-template-areas:
+                      "imgProducto cantidadCart precioCart subtotalCart"
+                      "imgProducto cantidadCart precioCart subtotalCart"
+                      "imgProducto cantidadCart precioCart subtotalCart"
+                      "imgProducto cantidadCart precioCart subtotalCart"
+
+ }
+
+ .tamanoTitleCart{
+  width: 90%;
+  margin-left: 5%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+ }
+
+  .titleCart{
+    grid-area: titleCart;
+    text-align: center;
+  }
+
+  .imgProducto{
+    grid-area: imgProducto;
+  }
+
+  .textCart{
+    grid-area: textCart;
+    text-align: center;
+  }
+
+  .precioCart{
+    grid-area: precioCart;
+    text-align: center;
+  }
+
+  .cantidadCart{
+    grid-area: cantidadCart;
+    text-align: center;
+  }
+
+  .subtotalCart{
+    grid-area: subtotalCart;
+    text-align: center;
+  }
+
+   .lineCart{
+    border-top: 0.5px solid rgba(0, 0, 0, 0.185);
+    width: 90%;
+    margin-left: 5%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .sinlineCart{
+    width: 90%;
+    margin-left: 5%;
+    padding-top: 5x;
+  }
+
+  .impFinal{
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+ 
+  .titleCart{
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  
+  .checkoutContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr 1fr 0.3fr;
+    grid-template-areas:
+                      "topGrid topGrid"
+                      "col1 col1"
+                      "col2 col2"
+                      "centerBtn centerBtn";
+  }
+
+  .centerBtn{
+    grid-area: centerBtn;
+    text-align: center;
+  }
+
+  .topGrid{
+    grid-area: topGrid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+  }
+
+  .col1{
+    grid-area: col1;
+  }
+
+  .col2{
+    grid-area: col2;
+  }
+
+  .cardUser{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0px 5px 20px 5px;
+
+    border-radius: 10px;
+    box-shadow: rgb(71 71 71 / 30%) 0px 0px 40px 1px;
+  }
+
+  .textCheckout{
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+
+  .spaceBet{
+    display: flex;
+    justify-content:space-between;
+    margin-top: 30px;
+  }
+
+  .input-group{
+    max-width: 70%;
+  }
+
+  .validation{
+    font-size: 12px;
+    color: rgb(0, 187, 40);
+  }
+
+  .validationX{
+    font-size: 12px;
+    color: rgb(255, 47, 47);
+  }
+
+@media (min-width: 576px) { 
+
+  .cardDetalles{
+    width: 95%;
+    height: 850px;
+    border: 0.2px rgba(0, 0, 0, 0.171) solid;
+    border-radius: 50px;
+    margin: 2.5%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.1fr 0.3fr 0.4fr;
+    grid-template-areas:
+                        "imgProductoDetail imgProductoDetail imgProductoDetail imgProductoDetail"
+                        "titleDetails titleDetails titleDetails titleDetails"
+                        "textDetails textDetails textDetails textDetails"
+                        "precioDetails precioDetails precioDetails precioDetails"
+  }
+
+  .checkoutContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr 1fr 0.3fr;
+    grid-template-areas:
+                      "topGrid topGrid"
+                      "col1 col2"
+                      "col1 col2"
+                      "centerBtn centerBtn";
+  }
+
+
+
+ }
+
+
+
+@media (min-width: 768px) { 
+
+  .checkoutContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr 1fr 0.3fr;
+    grid-template-areas:
+                      "topGrid topGrid"
+                      "col1 col2"
+                      "col1 col2"
+                      "centerBtn centerBtn";
+  }
+ }
+
+ .imgProducto{
+    height: 50px;
+    width: 50px;
+ }

@@ -7,8 +7,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import NotFound from './components/NotFound';
 import ShopProvider from './context/ShopContext';
 import Cart from './containers/Cart';
-import ModalCart from './containers/Cart/ModalCart';
-import ModalCliente from './containers/Cart/ModalCliente';
+//import ModalCart from './containers/Cart/ModalCart';
+//import ModalCliente from './containers/Cart/ModalCliente';
+import Checkout from './components/Checkout';
 
 function App() {
 
@@ -21,8 +22,11 @@ function App() {
           <Route path='/category/:categoryid' element={<ItemListContainer />}></Route>
           <Route path='/detail/:productid' element={<ItemDetailContainer />}></Route>
           <Route path='/cart' element={<Cart />}></Route>
-          <Route path='/ModalCart' element={<ModalCart />}></Route>
-          <Route path='/ModalCliente' element={<ModalCliente />}></Route>
+         
+
+          <Route path="/Checkout" element={<Checkout />} />
+
+            
           <Route path='*' element={<NotFound />} />
         </Routes>
       </BrowserRouter>

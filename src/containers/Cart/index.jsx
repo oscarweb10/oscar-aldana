@@ -17,7 +17,7 @@ const Cart = () => {
     //console.log('Document written with ID: ', docRef.id);
     // alert(`'Document written with ID: ', ${docRef.id}`)
 
-    navigation('/ModalCliente')
+    navigation('/Checkout')
   }
   return (
     <>
